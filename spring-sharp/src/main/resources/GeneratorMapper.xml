@@ -1,0 +1,62 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE generatorConfiguration  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">-->
+<!--<generatorConfiguration>-->
+
+<!--    &lt;!&ndash; 指定连接数据库的 JDBC 驱动包所在位置，指定到你本机的完整路径 &ndash;&gt;-->
+<!--    &lt;!&ndash;1.找到mysql驱动的绝对路径&ndash;&gt;-->
+<!--    &lt;!&ndash; 配置 table表信息内容体，targetRuntime 指定采用MyBatis3 的版本 &ndash;&gt;-->
+<!--    <context id="tables" targetRuntime="MyBatis3">-->
+
+<!--        &lt;!&ndash; 抑制生成注释，由于生成的注释都是英文的，可以不让它生成 &ndash;&gt;-->
+<!--        <commentGenerator>-->
+<!--            <property name="suppressAllComments" value="true"/>-->
+<!--            <property name="suppressDate" value="true"/>-->
+<!--            <property name="addRemarkComments" value="true"/>-->
+<!--        </commentGenerator>-->
+
+<!--        &lt;!&ndash; 2.配置数据库连接信息 &ndash;&gt;-->
+<!--        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/coach_user"-->
+<!--                        userId="root" password="123456789"></jdbcConnection>-->
+
+<!--        &lt;!&ndash;根据数据库表(字段)生成实体类、dao、映射配置文件&ndash;&gt;-->
+
+<!--        &lt;!&ndash; 3.生成 model类，targetPackage指定 model 类的包名， targetProject指定 生成的model放在 eclipse的哪个工程下面&ndash;&gt;-->
+<!--        <javaModelGenerator targetPackage="com.evol.domain.model" targetProject="src/main/java">-->
+<!--            <property name="enableSubPackages" value="false"/>-->
+<!--            <property name="trimStrings" value="false"/>-->
+<!--        </javaModelGenerator>-->
+
+<!--        &lt;!&ndash; 生成 MyBatis 的Mapper.xml 文件，targetPackage 指定mapper.xml 文件的 包名， targetProject 指定生成的mapper.xml 放在eclipse 的哪个工程下面 &ndash;&gt;-->
+<!--        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">-->
+<!--            <property name="enableSubPackages" value="false"/>-->
+<!--        </sqlMapGenerator>-->
+
+<!--        &lt;!&ndash; 生成 MyBatis 的Mapper 接口类文件,targetPackage指定 Mapper接口类的包 名， targetProject指定生成的 Mapper接口放在 eclipse 的哪个工程下面 &ndash;&gt;-->
+<!--        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.ccut.springboot.mapper" targetProject="src/main/java">-->
+<!--            <property name="enableSubPackages" value="false"/>-->
+<!--        </javaClientGenerator>-->
+
+
+<!--        &lt;!&ndash;-->
+<!--             一个table标签，代表一个表和一个实体类的对应关系-->
+<!--                如果想创建多个实体类，就需要使用多个table标签-->
+<!--             数据库表名及对应的Java模型类名-->
+<!--                根据条件查询生成的一些方法      Example 条件-->
+<!--               enableCountByExample="false"-->
+<!--               enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"-->
+<!--               selectByExampleQueryId="false"-->
+<!--                    都是自动生成的方法和sql语句配置-->
+<!--                    操作生成的api，就相当于可以执行某些sql语句-->
+<!--                     多表自己写SQL-->
+<!--        &ndash;&gt;-->
+<!--        <table tableName="user" domainObjectName="User" enableCountByExample="true"-->
+<!--               enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true"-->
+<!--               selectByExampleQueryId="true">-->
+<!--            <generatedKey column="id" sqlStatement="JDBC" identity="true"/>-->
+<!--        </table>-->
+
+<!--    </context>-->
+<!--</generatorConfiguration>-->
